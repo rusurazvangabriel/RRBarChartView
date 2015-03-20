@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarChartView/RRProgressBarView.m"
-            timestampString = "448559483.105815"
+            timestampString = "448560337.157216"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-_updateConstraints"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarChartView/RRProgressBarView.m"
-            timestampString = "448559483.105815"
+            timestampString = "448560337.157216"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "-_updateConstraints"
             landmarkType = "5">
          </BreakpointContent>

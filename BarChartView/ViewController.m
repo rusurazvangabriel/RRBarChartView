@@ -13,7 +13,10 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) RRProgressBarView *progressBarView;
+@property (strong, nonatomic) RRProgressBarView *horizontalProgressBarView;
+
+@property (strong, nonatomic) RRProgressBarView *verticalProgressBarView;
+
 @end
 
 @implementation ViewController
@@ -58,9 +61,21 @@
     [self _setStatusBar];
     [self _setRandomizeFlatButton];
     
-    _progressBarView = [[RRProgressBarView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
-    _progressBarView.center = self.view.center;
-    [self.view addSubview:_progressBarView];
+    _verticalProgressBarView = [[RRProgressBarView alloc] initWithFrame:CGRectMake(0, 0, 10, 150)];
+    _verticalProgressBarView.roundCorners = YES;
+    _verticalProgressBarView.progressBarColor = [UIColor colorWithRed:0.906 green:0.298 blue:0.235 alpha:1];
+    _verticalProgressBarView.progressBarDirection = RRProgressBarDirectionVertical;
+    _verticalProgressBarView.progress = 0.33;
+    _verticalProgressBarView.center = self.view.center;
+    [self.view addSubview:_verticalProgressBarView];
+    
+    _horizontalProgressBarView = [[RRProgressBarView alloc] initWithFrame:CGRectMake(20, 35, self.view.bounds.size.width - 40, 15)];
+
+    _horizontalProgressBarView.progressBarDirection = RRProgressBarDirectionHorizontal;
+    _horizontalProgressBarView.progress = 0.99;
+    _horizontalProgressBarView.progressBarColor = [UIColor colorWithRed:0.204 green:0.596 blue:0.859 alpha:1];
+    _horizontalProgressBarView.roundCorners = YES;
+    [self.view addSubview:_horizontalProgressBarView];
     
     //_progressBarView.progressBarAlignment = RRProgressBarAlignmentHorizontal;
     // Do any additional setup after loading the view, typically from a nib.
@@ -69,17 +84,9 @@
 - (void)randomizeBarProgress:(FUIButton *)button
 {
     CGFloat percent = (CGFloat)(arc4random() % 100 + 1.0) * 0.01;
-    
-    if(_progressBarView.progressBarDirection == RRProgressBarDirectionVertical)
-    {
-        _progressBarView.progressBarDirection = RRProgressBarDirectionHorizontal;
-    }
-    else
-    {
-        _progressBarView.progressBarDirection = RRProgressBarDirectionVertical;
-    }
-    
-    _progressBarView.progress = percent;
+    _verticalProgressBarView.progress = percent;
+    percent = (CGFloat)(arc4random() % 100 + 1.0) * 0.01;
+    _horizontalProgressBarView.progress = percent;
     NSLog(@"%f",percent);
 }
 

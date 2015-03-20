@@ -1,7 +1,7 @@
 
 //  RRProgressBarView.h
 //  v0.1
-//  https://github.com/...
+//  https://github.com/rusurazvangabriel/RRBarChartView
 //
 //  Copyright (c) 2015 Razvan Rusu
 //
